@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 
@@ -10,7 +9,7 @@ function App() {
   return (
     <div>
       <button
-        style={{ backgroundColor: buttonColor }}
+        style={{ backgroundColor: isChecked ? 'gray' : buttonColor }}
         onClick={() => setButtonColor(newButtonColor)}
         disabled={isChecked}
       >
@@ -22,6 +21,7 @@ function App() {
         onChange={(e) => setIsChecked(e.target.checked)}
         defaultChecked={isChecked}
       />
+      <label htmlFor="disable-button-checkbox">Disable button</label>
     </div>
   );
 }
